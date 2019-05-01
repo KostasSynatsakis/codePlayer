@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code Player</title>
+
+    <!-- css -->
+    <link rel = "stylesheet" href="codePlayer.css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<body>
+
+<!-- header top-bar -->
+    <header id="topBar">
+        <div id="logo">CodePlayer</div>
+        <div id="buttonContainer">
+            <div id="html" class="toggleButton active">HTML</div>
+            <div id="css" class="toggleButton">CSS</div>
+            <div id="js" class="toggleButton">JS</div>
+            <div id="output" class="toggleButton active">Output</div>
+        </div>
+    </header>
+
+<!-- main -->
+    <section id = "main">
+        <div id="bodyContainer">
+            <!-- html -->
+            <textarea class="panel" id="htmlPanel">
+                <p id="test">Hello!</p>
+            </textarea>
+            <!-- css -->
+            <textarea class="panel hidden" id="cssPanel">
+               p {color: red;}
+            </textarea>
+            <!-- js -->
+            <textarea class="panel hidden" id="jsPanel">
+                document.getElementById("test").innerHTML = "Hello All!";
+            </textarea>
+            <!-- output -->
+            <iframe class="panel" id="outputPanel">
+
+            </iframe>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="codePlayer.js"></script>
+</body>
+</html>
